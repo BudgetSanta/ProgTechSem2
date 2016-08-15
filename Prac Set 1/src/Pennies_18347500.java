@@ -5,7 +5,7 @@
 //  Class Day: Tuesday
 //  Class Time: 9am
 
-import java.util.Scanner;
+import java.util.Scanner; 
 
 public class Pennies_18347500 {
 
