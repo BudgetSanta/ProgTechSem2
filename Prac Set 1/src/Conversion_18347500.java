@@ -25,7 +25,7 @@ public class Conversion_18347500 {
     double feet;                // Feet Conversion of metre input
     
     // MAIN CODE
-    double menuSelection = 0;   // Get rid of me when working
+    int menuSelection = 0;   // Necessary for the while statements 
     do {
       
       double iterationMetres = getDistance();        // gets Distance from user
@@ -37,7 +37,9 @@ public class Conversion_18347500 {
       
       do {
         printMenu();                   // Prints menu options
-        menuSelection = userDoubleInput("Enter your choice: ");
+        do {                           // menuSeletion is Int and 1 <= x <= 5
+          menuSelection = (int)userDoubleInput("Enter a menu choice between 1 and 5: ");
+        } while (menuSelection < 1 || menuSelection > 5);
         
         if (menuSelection == 1) {      // IF KILOMETRES
           printLine(iterationMetres + " metres is " + kilometres + " kilometres.");
@@ -80,7 +82,7 @@ public class Conversion_18347500 {
     System.out.println(message);
   }
   
-  // Prints out menu options and asks for choice
+  // Prints out menu options
   static void printMenu() {
     printLine("1. Convert to Kilometres");
     printLine("2. Convert to Inches");
