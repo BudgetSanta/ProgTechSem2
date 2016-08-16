@@ -11,33 +11,35 @@ public class Conversion_18347500 {
 
   // New keyboard input instance
   public static Scanner kb = new Scanner(System.in);
+  
+  //SET VARS
+  public static double KM_PER_M = 0.001;      // KM Conversion rate
+  public static double INCH_PER_M = 39.37;    // INCH Conversion rate
+  public static double FEET_PER_M = 3.281;    // FOOT Conversion rate
 
   public static void main(String[] args) {
-
-    // SET VARS
-    final double KM_PER_M = 0.001;      // KM Conversion rate
-    final double INCH_PER_M = 39.37;    // INCH Conversion rate
-    final double FEET_PER_M = 3.281;    // FOOT Conversion rate
-
-    // MAIN CODE
-    int menuSelection = 0;   // Necessary for the while statements
+    
+    int menuSelection = 0;                          // Necessary for the while statements
+    
+    // ENTIRE MENU DO WHILE
     do {
-
-      double iterationMetres = getDistance();        // gets Distance from user
-
+      double iterationMetres = getDistance();       // gets Distance from user
+      
+      // REPETITION OF ITERATION METRES MENU
       do {
+        
         printMenu();                   // Prints menu options
-        do {                           // menuSeletion is Int and 1 <= x <= 5
+        do {                           // validates 1 => INT => 5
           menuSelection = (int)userDoubleInput("Enter a menu choice between 1 and 5: ");
         } while (menuSelection < 1 || menuSelection > 5);
 
         // MENU SELECTION CONVERSION/RETRY/EXIT
         switch (menuSelection) {
-          case 1: showKilometres(iterationMetres, KM_PER_M);    // IF KILOMETRES
+          case 1: showKilometres(iterationMetres);  // IF KILOMETRES
                   break;
-          case 2: showInches(iterationMetres, INCH_PER_M);      // IF INCHES
+          case 2: showInches(iterationMetres);      // IF INCHES
                   break;
-          case 3: showFeet(iterationMetres, FEET_PER_M);        // IF FEET
+          case 3: showFeet(iterationMetres);        // IF FEET
                   break;
         }
 
@@ -62,19 +64,19 @@ public class Conversion_18347500 {
     return inputMetres;
   }
 
-  public static void showKilometres(double metres, double KM_PER_M) {
+  public static void showKilometres(double metres) {
     double kilometres = metres*KM_PER_M;         // create KM conversion
     printLine(metres + " metres is " + kilometres + " kilometres.");
     printLine("");
   }
 
-  public static void showInches(double metres, double INCH_PER_M) {
+  public static void showInches(double metres) {
     double inches = metres*INCH_PER_M;           // create INCH conversion
     printLine(metres + " metres is " + inches + " inches.");
     printLine("");
   }
 
-  public static void showFeet(double metres, double FEET_PER_M) {
+  public static void showFeet(double metres) {
     double feet = metres*FEET_PER_M;             // create FEET conversion
     printLine(metres + " metres is " + feet + " feet.");
     printLine("");
