@@ -11,23 +11,23 @@ public class Conversion_18347500 {
 
   // New keyboard input instance
   public static Scanner kb = new Scanner(System.in);
-  
+
   //SET VARS
   public static double KM_PER_M = 0.001;      // KM Conversion rate
   public static double INCH_PER_M = 39.37;    // INCH Conversion rate
   public static double FEET_PER_M = 3.281;    // FOOT Conversion rate
 
   public static void main(String[] args) {
-    
+
     int menuSelection = 0;                          // Necessary for the while statements
-    
+
     // ENTIRE MENU DO WHILE
     do {
-      double iterationMetres = getDistance();       // gets Distance from user 
-      
+      double iterationMetres = getDistance();       // gets Distance from user
+
       // REPETITION OF ITERATION METRES MENU
       do {
-        
+
         printMenu();                   // Prints menu options
         do {                           // validates 1 => INT => 5
           menuSelection = (int)userDoubleInput("Enter a menu choice between 1 and 5: ");
