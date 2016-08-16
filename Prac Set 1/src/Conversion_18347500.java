@@ -23,7 +23,7 @@ public class Conversion_18347500 {
     
     // ENTIRE MENU DO WHILE
     do {
-      double iterationMetres = getDistance();       // gets Distance from user
+      double iterationMetres = getDistance();       // gets Distance from user 
       
       // REPETITION OF ITERATION METRES MENU
       do {
