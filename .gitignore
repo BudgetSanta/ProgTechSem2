@@ -2,3 +2,5 @@
 /.recommenders/
 *.zip
 *.class
+*.doc
+*.docx
