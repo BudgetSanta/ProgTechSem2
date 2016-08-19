@@ -1,0 +1,2 @@
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>moved conversion rate constants to outside main&\#x0A;Public static doubles now don&apos;t need to be referenced in method&\#x0A;variables</message>\r\n<message>Added menuSelection check&\#x0A;Selection now Int and wont be double&\#x0A;Also wont allow selections outside of menu options</message>\r\n<message>Testing Eclipse Git Commit</message>\r\n<message>New Project\: Hello World&\#x0A;&\#x0A;Blerp</message>\r\n</messages>
+eclipse.preferences.version=1

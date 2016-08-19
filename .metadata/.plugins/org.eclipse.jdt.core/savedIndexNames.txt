@@ -1,0 +1,6 @@
+INDEX VERSION 1.127+C:\Users\Jared\Google Drive\Uni\Semester 2\Prog Tech\Eclipse Workspace\.metadata\.plugins\org.eclipse.jdt.core
+26201783.index
+2550421274.index
+993539649.index
+478871055.index
+3621137834.index

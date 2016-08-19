@@ -1,0 +1,93 @@
+//  Student ID: 18347500
+//  Name: Jared Steiner
+//  Campus: Parramatta
+//  Tutor Name: Jordan Collier
+//  Class Day: Tuesday
+//  Class Time: 9am
+
+import java.util.Scanner;
+
+public class Conversion_18347500 {
+
+  // New keyboard input instance
+  public static Scanner kb = new Scanner(System.in);
+  
+  public static void main(String[] args) {
+    
+    // SET VARS
+    final double KM_PER_M = 0.001;      // KM Conversion rate
+    final double INCH_PER_M = 39.37;    // INCH Conversion rate
+    final double FEET_PER_M = 3.281;    // FOOT Conversion rate
+    
+    // Variables
+    double kilometres;          // KM Conversion of metre input
+    double inches;              // Inch Conversion of metre input
+    double feet;                // Feet Conversion of metre input
+    
+    // MAIN CODE
+    double menuSelection = 0;   // Get rid of me when working
+    do {
+      
+      double iterationMetres = getDistance();        // gets Distance from user
+      
+      // Create conversions
+      kilometres = iterationMetres*KM_PER_M;         // create KM conversion
+      inches = iterationMetres*INCH_PER_M;           // create inches conversion
+      feet = iterationMetres*FEET_PER_M;             // create feet conversion
+      
+      do {
+        printMenu();                   // Prints menu options
+        menuSelection = userDoubleInput("Enter your choice: ");
+        
+        if (menuSelection == 1) {      // IF KILOMETRES
+          printLine(iterationMetres + " metres is " + kilometres + " kilometres.");
+          printLine("");
+        }
+        
+        else if (menuSelection == 2) { // IF INCHES
+          printLine(iterationMetres + " metres is " + inches + " inches.");
+          printLine("");
+        }
+        
+        else if (menuSelection == 3) { // IF FEET
+          printLine(iterationMetres + " metres is " + feet + " feet.");
+          printLine("");
+        }
+        
+      } while ( menuSelection < 4); // While conversion asked, repeat
+      
+    } while (menuSelection != 5);   // While new distance asked, repeat
+    
+  }
+  
+  static double userDoubleInput(String inputMessage) {
+    System.out.print(inputMessage);
+    return kb.nextDouble();
+  }
+  
+  // Gets the metres distance from user
+  static double getDistance() {
+    double inputMetres;                 // Local metres variable for method
+    do {
+      inputMetres = userDoubleInput("Enter a distance in metres: ");
+    } while (inputMetres < 0.0);
+    
+    return inputMetres;
+  }
+  
+  // Quicker println() statement
+  static void printLine(String message) {
+    System.out.println(message);
+  }
+  
+  // Prints out menu options and asks for choice
+  static void printMenu() {
+    printLine("1. Convert to Kilometres");
+    printLine("2. Convert to Inches");
+    printLine("3. Convert to Feet");
+    printLine("4. Enter new Distance");
+    printLine("5. Quit the program");
+    printLine("");
+  }
+
+}
