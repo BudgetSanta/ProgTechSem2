@@ -4,4 +4,4 @@
 *.class
 *.doc
 *.docx
-.project
+/.project
