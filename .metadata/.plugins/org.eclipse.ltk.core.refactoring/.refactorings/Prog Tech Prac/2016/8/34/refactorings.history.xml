@@ -1,3 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring accessors="true" comment="Delete element from project &apos;Prog Tech Prac&apos;&#x0D;&#x0A;- Original project: &apos;Prog Tech Prac&apos;&#x0D;&#x0A;- Original element: &apos;PracSet1&apos;" description="Delete element" element1="PracSet1" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="1" stamp="1471260138423" subPackages="false" version="1.0"/>&#x0A;<refactoring accessors="true" comment="Delete element from project &apos;Prog Tech Prac&apos;&#x0D;&#x0A;- Original project: &apos;Prog Tech Prac&apos;&#x0D;&#x0A;- Original element: &apos;WK2L&apos;" description="Delete element" element1="WK2L" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="1" stamp="1471260183888" subPackages="false" version="1.0"/>&#x0A;<refactoring accessors="true" comment="Delete element from project &apos;Prog Tech Prac&apos;&#x0D;&#x0A;- Original project: &apos;Prog Tech Prac&apos;&#x0D;&#x0A;- Original element: &apos;WK2P&apos;" description="Delete element" element1="WK2P" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="1" stamp="1471260201762" subPackages="false" version="1.0"/>&#x0A;<refactoring accessors="true" comment="Delete 2 elements from project &apos;Prog Tech Prac&apos;&#x0D;&#x0A;- Original project: &apos;Prog Tech Prac&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     WK3P&#x0D;&#x0A;     WK4P" description="Delete elements" element1="WK3P" element2="WK4P" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="2" stamp="1471260207413" subPackages="false" version="1.0"/>
+<session version="1.0">&#x0A;
+	<refactoring accessors="true"
+		comment="Delete element from project &apos;Prog Tech Prac&apos;&#x0D;&#x0A;- Original project: &apos;Prog Tech Prac&apos;&#x0D;&#x0A;- Original element: &apos;PracSet1&apos;"
+		description="Delete element" element1="PracSet1" elements="0" flags="589830"
+		id="org.eclipse.jdt.ui.delete" resources="1" stamp="1471260138423"
+		subPackages="false" version="1.0" />&#x0A;
+	<refactoring accessors="true"
+		comment="Delete element from project &apos;Prog Tech Prac&apos;&#x0D;&#x0A;- Original project: &apos;Prog Tech Prac&apos;&#x0D;&#x0A;- Original element: &apos;WK2L&apos;"
+		description="Delete element" element1="WK2L" elements="0" flags="589830"
+		id="org.eclipse.jdt.ui.delete" resources="1" stamp="1471260183888"
+		subPackages="false" version="1.0" />&#x0A;
+	<refactoring accessors="true"
+		comment="Delete element from project &apos;Prog Tech Prac&apos;&#x0D;&#x0A;- Original project: &apos;Prog Tech Prac&apos;&#x0D;&#x0A;- Original element: &apos;WK2P&apos;"
+		description="Delete element" element1="WK2P" elements="0" flags="589830"
+		id="org.eclipse.jdt.ui.delete" resources="1" stamp="1471260201762"
+		subPackages="false" version="1.0" />&#x0A;
+	<refactoring accessors="true"
+		comment="Delete 2 elements from project &apos;Prog Tech Prac&apos;&#x0D;&#x0A;- Original project: &apos;Prog Tech Prac&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     WK3P&#x0D;&#x0A;     WK4P"
+		description="Delete elements" element1="WK3P" element2="WK4P"
+		elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="2"
+		stamp="1471260207413" subPackages="false" version="1.0" />
 </session>

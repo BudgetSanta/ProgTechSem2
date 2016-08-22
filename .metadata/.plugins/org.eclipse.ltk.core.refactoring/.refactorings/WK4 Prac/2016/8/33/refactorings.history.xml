@@ -1,3 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Copy 2 elements to &apos;Prac Set 1/src&apos;&#x0D;&#x0A;- Original project: &apos;WK4 Prac&apos;&#x0D;&#x0A;- Destination element: &apos;Prac Set 1/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     ConversionProgram.java&#x0D;&#x0A;     RightTriangle.java" description="Copy compilation units" destination="=Prac Set 1/src" element1="/src&lt;{ConversionProgram.java" element2="/src&lt;{RightTriangle.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1470703208357" units="2" version="1.0"/>&#x0A;<refactoring comment="Copy 2 elements to &apos;Prac Set 1/src&apos;&#x0D;&#x0A;- Original project: &apos;WK4 Prac&apos;&#x0D;&#x0A;- Destination element: &apos;Prac Set 1/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     ConversionProgram.java&#x0D;&#x0A;     RightTriangle.java" description="Copy compilation units" destination="=Prac Set 1/src" element1="/src&lt;{ConversionProgram.java" element2="/src&lt;{RightTriangle.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1470703229449" units="2" version="1.0"/>
+<session version="1.0">&#x0A;
+	<refactoring
+		comment="Copy 2 elements to &apos;Prac Set 1/src&apos;&#x0D;&#x0A;- Original project: &apos;WK4 Prac&apos;&#x0D;&#x0A;- Destination element: &apos;Prac Set 1/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     ConversionProgram.java&#x0D;&#x0A;     RightTriangle.java"
+		description="Copy compilation units" destination="=Prac Set 1/src"
+		element1="/src&lt;{ConversionProgram.java" element2="/src&lt;{RightTriangle.java"
+		files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy"
+		policy="org.eclipse.jdt.ui.copyResources" stamp="1470703208357" units="2"
+		version="1.0" />&#x0A;
+	<refactoring
+		comment="Copy 2 elements to &apos;Prac Set 1/src&apos;&#x0D;&#x0A;- Original project: &apos;WK4 Prac&apos;&#x0D;&#x0A;- Destination element: &apos;Prac Set 1/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     ConversionProgram.java&#x0D;&#x0A;     RightTriangle.java"
+		description="Copy compilation units" destination="=Prac Set 1/src"
+		element1="/src&lt;{ConversionProgram.java" element2="/src&lt;{RightTriangle.java"
+		files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy"
+		policy="org.eclipse.jdt.ui.copyResources" stamp="1470703229449" units="2"
+		version="1.0" />
 </session>

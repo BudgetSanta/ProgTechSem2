@@ -1,3 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;WK2 Lecture&apos;" deleteContents="true" description="Delete resource &apos;WK2 Lecture&apos;" element1="/WK2 Lecture" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1471259584823"/>&#x0A;<refactoring comment="Delete resource &apos;Prac Set 1&apos;" deleteContents="false" description="Delete resource &apos;Prac Set 1&apos;" element1="/Prac Set 1" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1471259646582"/>&#x0A;<refactoring comment="Delete resource &apos;WK2 Lecture&apos;" deleteContents="false" description="Delete resource &apos;WK2 Lecture&apos;" element1="/WK2 Lecture" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1471260178520"/>&#x0A;<refactoring comment="Delete resource &apos;ProgTechAll&apos;" deleteContents="false" description="Delete resource &apos;ProgTechAll&apos;" element1="/ProgTechAll" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1471260257442"/>&#x0A;<refactoring comment="Delete resource &apos;Prog Tech Prac&apos;" deleteContents="true" description="Delete resource &apos;Prog Tech Prac&apos;" element1="/Prog Tech Prac" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1471260284272"/>&#x0A;<refactoring comment="Delete resource &apos;HelloWorld&apos;" deleteContents="false" description="Delete resource &apos;HelloWorld&apos;" element1="/HelloWorld" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1471261887479"/>
+<session version="1.0">&#x0A;
+	<refactoring comment="Delete resource &apos;WK2 Lecture&apos;"
+		deleteContents="true" description="Delete resource &apos;WK2 Lecture&apos;"
+		element1="/WK2 Lecture" flags="7"
+		id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1"
+		stamp="1471259584823" />&#x0A;
+	<refactoring comment="Delete resource &apos;Prac Set 1&apos;"
+		deleteContents="false" description="Delete resource &apos;Prac Set 1&apos;"
+		element1="/Prac Set 1" flags="7"
+		id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1"
+		stamp="1471259646582" />&#x0A;
+	<refactoring comment="Delete resource &apos;WK2 Lecture&apos;"
+		deleteContents="false" description="Delete resource &apos;WK2 Lecture&apos;"
+		element1="/WK2 Lecture" flags="7"
+		id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1"
+		stamp="1471260178520" />&#x0A;
+	<refactoring comment="Delete resource &apos;ProgTechAll&apos;"
+		deleteContents="false" description="Delete resource &apos;ProgTechAll&apos;"
+		element1="/ProgTechAll" flags="7"
+		id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1"
+		stamp="1471260257442" />&#x0A;
+	<refactoring comment="Delete resource &apos;Prog Tech Prac&apos;"
+		deleteContents="true" description="Delete resource &apos;Prog Tech Prac&apos;"
+		element1="/Prog Tech Prac" flags="7"
+		id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1"
+		stamp="1471260284272" />&#x0A;
+	<refactoring comment="Delete resource &apos;HelloWorld&apos;"
+		deleteContents="false" description="Delete resource &apos;HelloWorld&apos;"
+		element1="/HelloWorld" flags="7"
+		id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1"
+		stamp="1471261887479" />
 </session>

@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <session version="1.0">
-<refactoring comment="Move source folder &apos;src&apos; to &apos;WK2L&apos;&#x0D;&#x0A;- Original project: &apos;WK2 Lecture&apos;&#x0D;&#x0A;- Destination element: &apos;WK2L&apos;&#x0D;&#x0A;- Original element: &apos;WK2 Lecture/src&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move source folder" element1="/src" flags="6" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveRoots" roots="1" stamp="1471259567862" target="/Prog Tech Prac/WK2L" version="1.0"/>
+	<refactoring
+		comment="Move source folder &apos;src&apos; to &apos;WK2L&apos;&#x0D;&#x0A;- Original project: &apos;WK2 Lecture&apos;&#x0D;&#x0A;- Destination element: &apos;WK2L&apos;&#x0D;&#x0A;- Original element: &apos;WK2 Lecture/src&apos;&#x0D;&#x0A;- Update references to refactored element"
+		description="Move source folder" element1="/src" flags="6"
+		id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveRoots"
+		roots="1" stamp="1471259567862" target="/Prog Tech Prac/WK2L" version="1.0" />
 </session>

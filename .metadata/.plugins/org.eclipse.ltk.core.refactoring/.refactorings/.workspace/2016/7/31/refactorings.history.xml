@@ -1,3 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;Wk2 PR- Bill and Stock&apos;" deleteContents="true" description="Delete resource &apos;Wk2 PR- Bill and Stock&apos;" element1="/Wk2 PR- Bill and Stock" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1469489519426"/>&#x0A;<refactoring comment="Delete resource &apos;Restaurant Bill&apos;" deleteContents="true" description="Delete resource &apos;Restaurant Bill&apos;" element1="/Restaurant Bill" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1469490476467"/>
+<session version="1.0">&#x0A;
+	<refactoring comment="Delete resource &apos;Wk2 PR- Bill and Stock&apos;"
+		deleteContents="true" description="Delete resource &apos;Wk2 PR- Bill and Stock&apos;"
+		element1="/Wk2 PR- Bill and Stock" flags="7"
+		id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1"
+		stamp="1469489519426" />&#x0A;
+	<refactoring comment="Delete resource &apos;Restaurant Bill&apos;"
+		deleteContents="true" description="Delete resource &apos;Restaurant Bill&apos;"
+		element1="/Restaurant Bill" flags="7"
+		id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1"
+		stamp="1469490476467" />
 </session>
