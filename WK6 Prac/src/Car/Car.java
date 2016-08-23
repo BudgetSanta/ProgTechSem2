@@ -7,7 +7,25 @@ public class Car {
 
   public static void main(String[] args) {
 
-	printLine("Hello World");
+  	/**
+    Demonstrate"
+     - Create car
+     - call accel 5*
+        -> print each iter
+     - call brake 5*
+        -> print current speed each iter
+    */
+
+    Car myCar = new Car("myMake", 2000);
+    for (int i = 0; i < 10; i++) {
+      if (i < 5) {
+        myCar.accelerate();
+      }
+      else {
+        myCar.brake();
+      }
+      printLine("" + myCar.getSpeed());
+    }
 
     kb.close();
   }
@@ -21,16 +39,16 @@ public class Car {
   */
 
   String make;
-  String model;
-  int year;
+  int yearModel;
+  int speed;
 
-  public Car (String carMake, String carModel, int carYear) {
-    this.make = carMake;
-    this.model = carModel;
-    this.year = carYear;
+  public Car (String carMake, int carYear) {
+    make = carMake;
+    yearModel = carYear;
+    speed = 0;
   }
 
-  // ##### SETTERS #####
+  // ##### ACCESSORS #####
   // ###################
 
   // Car make Setter
@@ -39,16 +57,16 @@ public class Car {
   }
 
   // Car model Setter
-  public void setModel(String carModel) {
-    this.model = carModel;
-  }
-
-  // Car year setter
   public void setYear(int carYear) {
-    this.year = carYear;
+    this.yearModel = carYear;
   }
 
-  // ##### GETTERS #####
+  // Car speed setter
+  public void setSpeed(int carSpeed) {
+    this.speed = carSpeed;
+  }
+
+  // ##### MUTATORS #####
   // ###################
 
   // Car make Getter
@@ -57,13 +75,23 @@ public class Car {
   }
 
   // Car model Getter
-  public String getModel() {
-    return model;
+  public int getModel() {
+    return yearModel;
   }
 
   // Car year Getter
-  public int getYear() {
-    return year;
+  public int getSpeed() {
+    return speed;
+  }
+
+  // Car accelerate method
+  public void accelerate() {
+    speed += 5;
+  }
+
+  // Car brake method
+  public void brake() {
+    speed -= 5;
   }
 
   // ##### INPUTS #####
