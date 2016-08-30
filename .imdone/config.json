@@ -22,11 +22,15 @@
   },
   "lists": [
     {
-      "name": "PLANNING",
+      "name": "NOTE",
+      "hidden": true
+    },
+    {
+      "name": "TODO",
       "hidden": false
     },
     {
-      "name": "NOTE",
+      "name": "DONE",
       "hidden": false
     }
   ],
