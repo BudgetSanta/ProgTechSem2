@@ -54,9 +54,6 @@ public class TwentyOne {
       System.out.println("        Total: " + iterUserRollTTL);
       System.out.println("  Grand Total: " + userRunTTL);
 
-      // REMOVE ME
-      System.out.println( "COMP TTL: " + compRunTTL);
-      // REMOVE ME
 
       // Setup to exit if comp or user over 21
       menuChoice = 1;
