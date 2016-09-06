@@ -2,20 +2,18 @@ import java.util.Scanner;
 
 public class Car {
 
-  public Scanner kb = new Scanner(System.in);
-
   String make;
-  int yearModel;
-  int speed;
+  Integer yearModel;
+  Integer speed;
   // MAKE, MODEL, YEAR CONSTRUCTOR
-  public Car (String carMake, int carYear, int carSpeed) {
+  public Car (String carMake, Integer carYear, Integer carSpeed) {
     make = carMake;
     yearModel = carYear;
     speed = carSpeed;
   }
 
   // MAKE, MODEL CONSTRUCTOR
-  public Car (String carMake, int carYear) {
+  public Car (String carMake, Integer carYear) {
     make = carMake;
     yearModel = carYear;
     speed = 0;
@@ -37,12 +35,12 @@ public class Car {
   }
 
   // Car model Setter
-  public void setYear(int carYear) {
+  public void setYear(Integer carYear) {
     this.yearModel = carYear;
   }
 
   // Car speed setter
-  public void setSpeed(int carSpeed) {
+  public void setSpeed(Integer carSpeed) {
     this.speed = carSpeed;
   }
 
@@ -55,12 +53,12 @@ public class Car {
   }
 
   // Car model Getter
-  public int getYear() {
+  public Integer getYear() {
     return yearModel;
   }
 
   // Car year Getter
-  public int getSpeed() {
+  public Integer getSpeed() {
     return speed;
   }
 
@@ -73,7 +71,7 @@ public class Car {
   }
 
   // Car variable accelerate method
-  public void accelerate(int inputAccelSpeed) {
+  public void accelerate(Integer inputAccelSpeed) {
     this.speed += inputAccelSpeed;
   }
 
@@ -83,23 +81,8 @@ public class Car {
   }
 
   // Car variable brake method
-  public void brake(int inputBreakSpeed) {
+  public void brake(Integer inputBreakSpeed) {
     this.speed -= inputBreakSpeed;
-  }
-
-  // ##### INPUTS #####
-  // ###################
-
-  // Shorter String input
-  public String getStr(String prompt) {
-    System.out.print(prompt);
-    return kb.next();
-  }
-
-  // Shorter Int input
-  public int getInt(String prompt) {
-    System.out.print(prompt);
-    return kb.nextInt();
   }
 
 }
