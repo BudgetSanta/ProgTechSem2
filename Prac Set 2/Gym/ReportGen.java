@@ -51,7 +51,8 @@ public class ReportGen {
           numGymPPL ++;                                 // Adding to count of Gym people
           ttlGymPay += iterationMember.getFee();        // Adding fee to running ttl of gym fees
           // gym.txt << FIRSTNAME LASTNAME FEE
-          gymPW.println(iterationMember.getFirstName() + " " + iterationMember.getLastName() + " " + iterationMember.getFee());
+          //gymPW.println(iterationMember.getFirstName() + " " + iterationMember.getLastName() + " " + iterationMember.getFee());
+          writeOut(gymPW, iterationMember);
           break;
 
         // CIRCUIT CASE
@@ -59,7 +60,8 @@ public class ReportGen {
           numCirPPL ++;                                 // Adding to coun of circuit people
           ttlCirPay += iterationMember.getFee();        // Adding fee to running ttl of circuit fees
           // circuit.txt << FIRSTNAME LASTNAME FEE
-          circuitPW.println(iterationMember.getFirstName() + " " + iterationMember.getLastName() + " " + iterationMember.getFee());
+          //circuitPW.println(iterationMember.getFirstName() + " " + iterationMember.getLastName() + " " + iterationMember.getFee());
+          writeOut(circuitPW, iterationMember);
           break;
       }
     }
@@ -105,6 +107,10 @@ public class ReportGen {
     File circuitFile = new File("circuit.txt");                   // Circuit File Created
     PrintWriter circuitOutFile = new PrintWriter(circuitFile);    // Circuit ouput PrintWriter created
     return circuitOutFile;
+  }
+
+  static void writeOut(PrintWriter outputPW, Member member) {
+    outputPW.println(member.getFirstName() + " " + member.getLastName() + " " + member.getFee());
   }
 
   static void printReport(int numGymPPL, float ttlGymPay, int numCirPPL, float ttlCirPay) {
