@@ -1,3 +1,10 @@
+//  Student ID: 18347500
+//  Name: Jared Steiner
+//  Campus: Parramatta
+//  Tutor Name: Jordan Collier
+//  Class Day: Tuesday
+//  Class Time: 9am
+
 import java.io.*;
 import java.util.Scanner;
 
@@ -5,79 +12,111 @@ public class ReportGen {
 
   public static void main(String[] args) throws IOException{
 
-    // FILE CREATION
-    File gymFile = new File("gym.txt");
-    PrintWriter gymOutFile = new PrintWriter(gymFile);
-    File circuitFile = new File("circuit.txt");
-    PrintWriter circuitOutFile = new PrintWriter(circuitFile);
-
     // VARIABLES
-    int numGymPPL = 0;
-    int numCirPPL = 0;
-    float ttlGymPay = 0;
-    float ttlCirPay = 0;
+    // Better to keep seperate rather than two arrays which are just indexes
+    int numGymPPL = 0;          // Number of people with Gym type
+    int numCirPPL = 0;          // Number of people with Circuit type
+    float ttlGymPay = 0;        // Total membership costs of gym types
+    float ttlCirPay = 0;        // Total membership costs of circuit types
 
+    File memberships = membershipFile();              // Membership file to read in from
+    PrintWriter gymPW = gymFile();                    // Gym PrintWriter to output to
+    PrintWriter circuitPW = circuitFile();            // Circuit PrintWriter to output to
+
+    Scanner readFile = new Scanner(memberships);    // Scaner to read through memberships
+    // While there is a new file, split it and look for type
+    while (readFile.hasNext()) {
+      String iterLineText = readFile.nextLine();
+      String[] parts = iterLineText.split(" ");
+
+      // Attributes parsed in object creation to keep line count down
+      //    "$: error: incompatible types: String cannot be converted to int"
+      //    Due to above error, parts[2/4/5] are parsed not cast. Error only appears when casting (int) or (float)
+      Member iterationMember = new Member(
+        parts[0],                       // First Name
+        parts[1],                       // Last Name
+        Integer.parseInt(parts[2]),     // Age
+        parts[3],                       // Type (Gym/Circuit)
+        Float.parseFloat(parts[4]),     // Weight
+        Float.parseFloat(parts[5])      // Fee
+      );
+
+      // Member Object created, write to TYPE.txt file with switch case
+      // The following adds to variables for report generation
+      // Not its own method because returning 4 variables and assigning again (or just making them public) is unecessary
+      switch (iterationMember.getType()) {
+
+        // GYM CASE
+        case "gym":
+          numGymPPL ++;                                 // Adding to count of Gym people
+          ttlGymPay += iterationMember.getFee();        // Adding fee to running ttl of gym fees
+          // gym.txt << FIRSTNAME LASTNAME FEE
+          gymPW.println(iterationMember.getFirstName() + " " + iterationMember.getLastName() + " " + iterationMember.getFee());
+          break;
+
+        // CIRCUIT CASE
+        case "circuit":
+          numCirPPL ++;                                 // Adding to coun of circuit people
+          ttlCirPay += iterationMember.getFee();        // Adding fee to running ttl of circuit fees
+          // circuit.txt << FIRSTNAME LASTNAME FEE
+          circuitPW.println(iterationMember.getFirstName() + " " + iterationMember.getLastName() + " " + iterationMember.getFee());
+          break;
+      }
+    }
+
+    // Close files
+    gymPW.close();
+    circuitPW.close();
+
+    printReport(numGymPPL, ttlGymPay, numCirPPL, ttlCirPay);
+
+  }
+
+  static File membershipFile() {
     // Keyboard instance
-    Scanner kb = new Scanner(System.in);
+    Scanner kb = new Scanner(System.in);      // Used for file location if necessary
 
+    // memberships file located with default location or user input
     File memberships = new File("memberships.txt");
     while (!memberships.exists()) {
       System.out.println("ERROR: 'memberships.txt' File Not Found");
       System.out.print("File location: ./");
       memberships = new File(kb.next());
     }
+
     // No more input from user needed
     kb.close();
 
-    Scanner readFile = new Scanner(memberships);
-    // DONE:10 While hasNext(), loop through members from input list
-    while (readFile.hasNext()) {
-      String iterLineText = readFile.nextLine();
-      String[] parts = iterLineText.split(" ");
+    return memberships;
+  }
 
-      // PARTS 0:Fname, 1:Lname, 2:Age, 3:Type, 4:Weight, 5:Fee
-      // Attributes cast in object creation cause im lazy
-      Member iterationMember = new Member(parts[0], parts[1], Integer.parseInt(parts[2]), parts[3], Float.parseFloat(parts[4]), Float.parseFloat(parts[5]));
+  // ## GYM AND CIRCUIT FILES ARE OVERWRITTEN ##
 
-      // DONE:20 switch case with .getType()
-      switch (iterationMember.getType()) {
+  // Creates the Gym Print Writer
+  static PrintWriter gymFile() throws IOException{
+    // FILE CREATION
+    File gymFile = new File("gym.txt");                           // Gym File Created
+    PrintWriter gymOutFile = new PrintWriter(gymFile);            // Gym output PrintWriter created
+    return gymOutFile;
+  }
 
-        // GYM CASE
-        case "gym":
-          // DONE:21 Case gym: numPPL++, ttlPay++
-          numGymPPL ++;
-          ttlGymPay += iterationMember.getFee();
-          // DONE:23 write fName, lName, fee to GYM
-          gymOutFile.println(iterationMember.getFirstName() + " " + iterationMember.getLastName() + " " + iterationMember.getFee());
-          break;
+  // Creates the Circuit Print Writer
+  static PrintWriter circuitFile() throws IOException{
+    File circuitFile = new File("circuit.txt");                   // Circuit File Created
+    PrintWriter circuitOutFile = new PrintWriter(circuitFile);    // Circuit ouput PrintWriter created
+    return circuitOutFile;
+  }
 
-        // CIRCUIT CASE
-        case "circuit":
-          // DONE:22 Case ciruit: numPPL++, ttlPay++
-          numCirPPL ++;
-          ttlCirPay += iterationMember.getFee();
-          // DONE:23 write fName, lName, fee to CIRCUIT
-          circuitOutFile.println(iterationMember.getFirstName() + " " + iterationMember.getLastName() + " " + iterationMember.getFee());
-          break;
-      }
-    }
-
-    // Close files
-    gymOutFile.close();
-    circuitOutFile.close();
-
+  static void printReport(int numGymPPL, float ttlGymPay, int numCirPPL, float ttlCirPay) {
     // FINAL REPORT
 
     System.out.println("            ##### REPORT ##### ");
     System.out.println("");
-    System.out.println("    People with Gym Membership: " + numGymPPL);
+    System.out.println("    People with Gym Membership:  " + numGymPPL);
     System.out.println("        Average Membership fee: $" + ttlGymPay/numGymPPL);
     System.out.println("");
-    System.out.println("People with Circuit Membership: " + numCirPPL);
+    System.out.println("People with Circuit Membership:  " + numCirPPL);
     System.out.println("        Average Membership fee: $" + ttlCirPay/numCirPPL);
-
-
-
   }
 
 }
