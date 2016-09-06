@@ -9,11 +9,11 @@ public class UserArrayFromFile {
 
     Scanner fileIn = new Scanner(numbers);    // Input file with numbers
     // Using variables to track attributes as file length could be unknown
-    int countOfNums = 0;                    // How many numbers have been passed in from file
-    Double totalSum = 0.00;                 // The total sum of numbers passed in, for the average
-    int largest = 0;                        // Holds the largest number passed in from file
-    int smallest = 0;                       // Holds the smallest number passed in from the file
-    Boolean firstIter = true;               // Boolean that ensures largest and smallest are assigned not 0 values, compilation error if not assigned 0 here tho
+    int countOfNums = 0;                      // How many numbers have been passed in from file
+    Double totalSum = 0.00;                   // The total sum of numbers passed in, for the average
+    int largest = 0;                          // Holds the largest number passed in from file
+    int smallest = 0;                         // Holds the smallest number passed in from the file
+    int firstIter = 0;                        // Int that ensures largest and smallest are assigned NOT 0 values, compilation error for smallest and largest if not assigned 0 here tho
 
     // Looping through file input
     while (fileIn.hasNext()) {
@@ -25,21 +25,10 @@ public class UserArrayFromFile {
       totalSum += iterNum;                  // Adding this iteration's number to total
       countOfNums ++;                       // adding one to the count of numbers
 
-      if (!firstIter) {
-        // running largest number
-        if (iterNum > largest) {
-          largest = iterNum;
-        }
-        // running smallest number
-        if (iterNum < smallest) {
-          smallest = iterNum;
-        }
-      }
-      else {
-        smallest = iterNum;
-        largest = iterNum;
-        firstIter = false;
-      }
+      int[] boundaryVars = boundaryCheck(iterNum, smallest, largest, firstIter);
+      smallest = boundaryVars[0];
+      largest = boundaryVars[1];
+      firstIter = boundaryVars[2];
     }
 
     fileIn.close();
@@ -71,10 +60,30 @@ public class UserArrayFromFile {
     return numbers;
   }
 
-  // static int[] boundaryCheck() {
-  //   // IFS
-  //   // return both smallest and largest? seperate methods?
-  //   return int[] output = new int[var1, var2];
-  // }
+  static int[] boundaryCheck(int iterNum, int smallest, int largest, int firstIter) {
+    if (firstIter == 0) {
+      // running largest number
+      if (iterNum > largest) {
+        largest = iterNum;
+      }
+      // running smallest number
+      if (iterNum < smallest) {
+        smallest = iterNum;
+      }
+    }
+    else {
+      smallest = iterNum;
+      largest = iterNum;
+      firstIter = 1;
+    }
+
+    // Allows values to be kept up to date without making them public
+    int[] output = new int[3];
+    output[0] = smallest;
+    output[1] = largest;
+    output[2] = firstIter;
+
+    return output;
+  }
 
 }
