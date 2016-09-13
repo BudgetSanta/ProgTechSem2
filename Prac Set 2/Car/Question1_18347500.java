@@ -8,14 +8,14 @@
 import java.util.Scanner;
 import java.io.*;
 
-public class Demo_18347500 {
+public class Question1_18347500 {
 
   public static Scanner kb = new Scanner(System.in);
 
   public static void main(String[] args) {
 
     // assign cars from carCreation()
-    Car[] garage = carCreation();       // Three car output from carCreation
+    Car_18347500[] garage = carCreation();       // Three car output from carCreation
 
     // INVENTORY OUTPUT
     System.out.println("\n\nOUTPUT: Cars in invetory");
@@ -36,7 +36,7 @@ public class Demo_18347500 {
   }
 
   // Print car details
-  public static void getCar(Car carInst, String carName) {
+  public static void getCar(Car_18347500 carInst, String carName) {
     System.out.println(" ----- " + carName + " ----- ");
     System.out.println(" Make: " + carInst.getMake());
     System.out.println(" Year: " + carInst.getYear());
@@ -65,19 +65,19 @@ public class Demo_18347500 {
     return outputInt;
   }
 
-  static Car[] carCreation() {
-    Car[] garage = new Car[3];              // Car Object Array to store cars
+  static Car_18347500[] carCreation() {
+    Car_18347500[] garage = new Car_18347500[3];              // Car Object Array to store cars
     // CAR CREATION
     System.out.println("Please enter the following details below for car creation");
 
     // CAR ONE uses the blank constructor
-    Car carOne = new Car();
+    Car_18347500 carOne = new Car_18347500();
     System.out.println("\nCar One created with blank constructor!");
     garage[0] = carOne;
 
     // CAR TWO uses a completely user generated constructor
     System.out.println("\nCar Two - Make, Year and Speed");
-    Car carTwo = new Car(
+    Car_18347500 carTwo = new Car_18347500(
       getStr("What is this car's make? "),
       getInt("What year was this car made? "),
       getInt("What is this car's current speed? ")
@@ -86,7 +86,7 @@ public class Demo_18347500 {
 
     // CAR THREE uses a semi user generated constructor setting speed to 0
     System.out.println("\nCar Three - Make and Year");
-    Car carThree = new Car(
+    Car_18347500 carThree = new Car_18347500(
       getStr("What is this car's make? "),
       getInt("What year was this car made? ")
     );
@@ -96,7 +96,7 @@ public class Demo_18347500 {
   }
 
   // DEMOs Acceleration mutators
-  static Car accelDemo(String carName, Car car) {
+  static Car_18347500 accelDemo(String carName, Car_18347500 car) {
 
     // ACCELERATE DEMO. speed, static accel, speed, var accel, speed
     System.out.println("\n\nDEMO: accelerate mutators");
@@ -118,7 +118,7 @@ public class Demo_18347500 {
   }
 
   // DEMOs Brake mutators
-  static Car brakeDemo(String carName, Car car) {
+  static Car_18347500 brakeDemo(String carName, Car_18347500 car) {
 
     // BRAKE DEMO. speed, static brake, speed, var brake, speed
     System.out.println("\n\nDEMO: brake mutators for " + carName);
@@ -141,7 +141,7 @@ public class Demo_18347500 {
   }
 
   // DEMOs attribute setters
-  static Car setterDemo(String carName, Car car) {
+  static Car_18347500 setterDemo(String carName, Car_18347500 car) {
     // SETTER DEMO. attributes, set attributes, attributes
     System.out.println("\n\nDEMO: Individual setters for " + carName);   // Much better than settlers
     getCar(car, carName);

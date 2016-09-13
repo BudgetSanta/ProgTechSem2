@@ -7,27 +7,27 @@
 
 import java.util.Scanner;
 
-public class Car {
+public class Car_18347500 {
 
   String make;
   Integer yearModel;
   Integer speed;
   // MAKE, MODEL, YEAR CONSTRUCTOR
-  public Car (String carMake, Integer carYear, Integer carSpeed) {
+  public Car_18347500 (String carMake, Integer carYear, Integer carSpeed) {
     make = carMake;
     yearModel = carYear;
     speed = carSpeed;
   }
 
   // MAKE, MODEL CONSTRUCTOR
-  public Car (String carMake, Integer carYear) {
+  public Car_18347500 (String carMake, Integer carYear) {
     make = carMake;
     yearModel = carYear;
     speed = 0;
   }
 
   // EMPTY CONSTRUCTOR
-  public Car () {
+  public Car_18347500 () {
     make = "Subaru";
     yearModel = 2016;
     speed = 50;
