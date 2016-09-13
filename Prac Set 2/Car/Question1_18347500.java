@@ -96,62 +96,62 @@ public class Question1_18347500 {
   }
 
   // DEMOs Acceleration mutators
-  static Car_18347500 accelDemo(String carName, Car_18347500 car) {
+  static Car_18347500 accelDemo(String carName, Car_18347500 carInstance) {
 
     // ACCELERATE DEMO. speed, static accel, speed, var accel, speed
     System.out.println("\n\nDEMO: accelerate mutators");
-    System.out.println(carName + " Speed: " + car.getSpeed());
+    System.out.println(carName + " Speed: " + carInstance.getSpeed());
 
     // First Accel
     System.out.println("Preset Accelerating by 5km/h...");
-    car.accelerate();
-    System.out.println(carName + " Speed: " + car.getSpeed());
+    carInstance.accelerate();
+    System.out.println(carName + " Speed: " + carInstance.getSpeed());
 
     // Second Accel
     int userInputAccel = getInt("Enter acceleration speed (Integer): ");     // User defined acceleration speed
-    car.accelerate(userInputAccel);
+    carInstance.accelerate(userInputAccel);
     System.out.println("Accelerating by " +  userInputAccel + " km/h...");
 
     // Final Speed
-    System.out.println(carName + " Speed: " + car.getSpeed());
-    return car;
+    System.out.println(carName + " Speed: " + carInstance.getSpeed());
+    return carInstance;
   }
 
   // DEMOs Brake mutators
-  static Car_18347500 brakeDemo(String carName, Car_18347500 car) {
+  static Car_18347500 brakeDemo(String carName, Car_18347500 carInstance) {
 
     // BRAKE DEMO. speed, static brake, speed, var brake, speed
     System.out.println("\n\nDEMO: brake mutators for " + carName);
-    System.out.println(carName + " Speed: " + car.getSpeed());
+    System.out.println(carName + " Speed: " + carInstance.getSpeed());
 
     // First Brake
     System.out.println("Preset Braking...");
-    car.brake();
-    System.out.println(carName + " Speed: " + car.getSpeed());
+    carInstance.brake();
+    System.out.println(carName + " Speed: " + carInstance.getSpeed());
 
     // Second Brake
     int userInputBrake = getInt("Enter brake speed (Integer): ");     // User defined brake speed
-    car.brake(userInputBrake);
+    carInstance.brake(userInputBrake);
     System.out.println("Braking by " +  userInputBrake + "km/h...");
 
     // Final Speed
-    System.out.println(carName + " Speed: " + car.getSpeed());
-    return car;
+    System.out.println(carName + " Speed: " + carInstance.getSpeed());
+    return carInstance;
 
   }
 
   // DEMOs attribute setters
-  static Car_18347500 setterDemo(String carName, Car_18347500 car) {
+  static Car_18347500 setterDemo(String carName, Car_18347500 carInstance) {
     // SETTER DEMO. attributes, set attributes, attributes
     System.out.println("\n\nDEMO: Individual setters for " + carName);   // Much better than settlers
-    getCar(car, carName);
+    getCar(carInstance, carName);
 
-    car.setMake(getStr(" Set Make: "));    //Set Car Make
-    car.setYear(getInt(" Set Year: "));    // Set car year with int validation
-    car.setSpeed(getInt("Set Speed: "));  // Set car speed with int validation
+    carInstance.setMake(getStr(" Set Make: "));    //Set Car Make
+    carInstance.setYear(getInt(" Set Year: "));    // Set car year with int validation
+    carInstance.setSpeed(getInt("Set Speed: "));  // Set car speed with int validation
     // Output car attributes
-    getCar(car, carName);
-    return car;
+    getCar(carInstance, carName);
+    return carInstance;
   }
 
   // returns true for ints > 0
