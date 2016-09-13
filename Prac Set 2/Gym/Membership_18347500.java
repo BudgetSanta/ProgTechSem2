@@ -8,7 +8,7 @@
 import java.io.*;
 import java.util.Scanner;
 
-public class ReportGen {
+public class Membership_18347500 {
 
   public static void main(String[] args) throws IOException{
 
