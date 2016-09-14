@@ -2,12 +2,7 @@ import java.io.*;
 
 public class IntegerValidation {
 
-  public static void main(String[] args) throws IOException{
-
-
-  }
-
-  //
+  // Returns boolean of whether strNum can be an Integer 
   static boolean isInt(String strNum) throws IOException{
     try {
       // cast string as int
