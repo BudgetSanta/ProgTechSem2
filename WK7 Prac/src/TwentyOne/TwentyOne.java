@@ -4,11 +4,6 @@ public class TwentyOne {
 
   public static void main(String[] args) {
 
-    //TODO:0 Method, return random roll 1-6 inclusive
-    //TODO:1 Main method, while (!= exit key) Do everything except show results
-    //TODO:2 userIterationTtl, compIterationTtl
-    //TODO:3
-
     // VARS
     int userRunTTL = 0;
     int compRunTTL = 0;

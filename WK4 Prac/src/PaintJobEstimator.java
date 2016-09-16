@@ -19,7 +19,7 @@ public class PaintJobEstimator {
 		final double HOURS_PER_GALLON = 8;	    // Hours of labour per gallon
 		final double WAGE_PER_HOUR = 18;	      // Wage of labour per hour
 		final double SQ_FEET_PER_GALLON = 115;  // How many square feet can be painted by each gallon
-		
+
 		// VARIABLES
 		int numRooms;						      // Number of rooms to paint
 		double paintCostGallon;				// Cost of paint per gallon
@@ -29,7 +29,7 @@ public class PaintJobEstimator {
 		double costOfPaint;           // How much paint will cost
 		double costOfLabour;          // How much labour will cost
 		double totalCost;             // How much the paint job will cost in total
-		
+
 		// New keyboard input instance
 		Scanner kb = new Scanner(System.in);
 
@@ -38,13 +38,13 @@ public class PaintJobEstimator {
 			pt("Please enter a positive number of rooms: ");
 			numRooms = kb.nextInt();
 		} while (numRooms < 1);
-		
+
 		// Asks for price of paint per gallon till positive
 		do {
 			pt("Please enter a positive dollar amount of paint per gallon. $");
 			paintCostGallon = kb.nextDouble();
 		} while (paintCostGallon < 0.0);
-		
+
 		// Adding total square footage of rooms
 		for (int i = 1; i < numRooms +1; i++) {
 			// Asks for square footage of room i
@@ -53,18 +53,18 @@ public class PaintJobEstimator {
 			  ttlSquareFeet += kb.nextDouble();
 			} while (ttlSquareFeet < 0.0);
 		}
-		
+
 	  // Closing Keyboard input instance
 		kb.close();
-		
-		// NOTE: Using methods to get these calculations are excessive for this simple program
+
+		// Using methods to get these calculations are excessive for this simple program
 		// Calculating outputs
 		gallonsNeeded = ttlSquareFeet/SQ_FEET_PER_GALLON;     // Gallons of paint needed
 		hoursOfLabour = gallonsNeeded*HOURS_PER_GALLON;       // Hours of work needed
 		costOfPaint = gallonsNeeded*paintCostGallon;          // Cost of paint total
 		costOfLabour = hoursOfLabour*WAGE_PER_HOUR;           // Cost of labour total
 		totalCost = costOfPaint + costOfLabour;               // Total cost
-		
+
 		// Final output
 		ptLn("");                                             // Break before output
 		ptLn("-- Total Project Costs --");                    // Title
@@ -75,7 +75,7 @@ public class PaintJobEstimator {
 		ptLn("");                                             // Break before grand total
 		ptLn("      Grand Total Cost:  $" + totalCost);       // Total Cost
 	}
-	
+
 	// Shortened method to println()
 	static void ptLn(String message) {
 	  System.out.println(message);
